@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+
+	@media screen and (max-width: 700px) {
+		font-size: 57%;
+	}
+
+	@media screen and (max-width: 450px) {
+		font-size: 50%;
+	}
+
+	@media screen and (max-width: 400px) {
+		font-size: 45%;
+	}
+}
+
+body {
+	font-family: $font-stack-primary;
+	overflow-x: hidden;
+	font-size: 1.75rem;
+	min-height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+li {
+	list-style-type: none;
+}

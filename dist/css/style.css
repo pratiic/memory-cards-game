@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 57%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  font-size: 1.75rem;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  list-style-type: none;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-large {
+  font-size: 4rem;
+}
+
+.text-medium {
+  font-size: 2.5rem;
+}
+
+.text-small {
+  font-size: 1.75rem;
+}
+
+.header {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #36342c;
+  color: white;
+  padding: 2rem 0;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.game-body {
+  background-color: #e6e2e2;
+  display: grid;
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  perspective: 100rem;
+  position: relative;
+}
+
+.game-body.small-game-body {
+  grid-template-columns: repeat(4, 9rem);
+  grid-template-rows: repeat(4, 9rem);
+}
+
+.game-body.gameover {
+  display: block;
+}
+
+.game-body.gameover .gameover {
+  text-align: center;
+  color: #8d1c1c;
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-top: 5rem;
+}
+
+.game-body.gameover .gameover p {
+  margin-bottom: 3rem;
+}
+
+.card {
+  height: 9rem;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 300ms ease-in;
+}
+
+.card .card-front {
+  background-color: #8d1c1c;
+}
+
+.card .card-back {
+  background-color: #007bff;
+  color: white;
+  transform: rotateY(-180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+}
+
+.card .card-front,
+.card .card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 9px;
+  backface-visibility: hidden;
+  transition: transform 300ms ease-in;
+}
+
+.card.flip .card-front {
+  transform: rotateY(180deg);
+}
+
+.card.flip .card-back {
+  transform: rotateY(0deg);
+}
+
+.card.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.game-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.game-menu .moves {
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  color: #8d1c1c;
+  margin-right: 12rem;
+}
+
+.game-menu .moves-count {
+  display: inline-block;
+  margin-left: 0.8rem;
+}
+
+.game-menu .reset-button {
+  border: none;
+  outline: none;
+  background-color: #8d1c1c;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  padding: 0.5rem 1.3rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.game-menu .reset-button:hover {
+  background-color: #6b1515;
+}
+
+.game-menu .reset-button:active {
+  background-color: #4d0f0f;
+}

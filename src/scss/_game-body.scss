@@ -1,0 +1,32 @@
+.game-body {
+	background-color: #e6e2e2;
+	display: grid;
+	grid-gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0;
+	perspective: 100rem;
+	position: relative;
+
+	&.small-game-body {
+		grid-template-columns: repeat(4, 9rem);
+		grid-template-rows: repeat(4, 9rem);
+	}
+
+	&.gameover {
+		display: block;
+
+		.gameover {
+			text-align: center;
+			color: $reddish-color;
+			font-size: 3rem;
+			text-transform: capitalize;
+			font-weight: 300;
+			margin-top: 5rem;
+
+			p {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+}
